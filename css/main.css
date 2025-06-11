@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Serif SC', serif;
+}
+
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://picsum.photos/1920/1080?random=1');
+    background-size: cover;
+    background-position: center;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.taichi-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/1920/1080?random=2');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.thoughts-card {
+    transition: all 0.3s ease;
+}
+
+.thoughts-card:hover {
+    transform: scale(1.03);
+}

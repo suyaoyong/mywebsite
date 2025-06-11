@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苏耀勇 - 个人主页</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome 图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">苏耀勇</a>
+            
+            <!-- 桌面端导航 -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-indigo-600 transition">关于我</a>
+                <a href="#articles" class="hover:text-indigo-600 transition">文章</a>
+                <a href="#taichi" class="hover:text-indigo-600 transition">太极拳</a>
+                <a href="#thoughts" class="hover:text-indigo-600 transition">生活随想</a>
+                <a href="#contact" class="hover:text-indigo-600 transition">联系我</a>
+            </div>
+            
+            <!-- 移动端菜单按钮 -->
+            <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#about" class="hover:text-indigo-600 transition py-2 border-b border-gray-100">关于我</a>
+                <a href="#articles" class="hover:text-indigo-600 transition py-2 border-b border-gray-100">文章</a>
+                <a href="#taichi" class="hover:text-indigo-600 transition py-2 border-b border-gray-100">太极拳</a>
+                <a href="#thoughts" class="hover:text-indigo-600 transition py-2 border-b border-gray-100">生活随想</a>
+                <a href="#contact" class="hover:text-indigo-600 transition py-2">联系我</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <header class="hero-section h-screen flex items-center justify-center text-white pt-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">苏耀勇</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">探索太极之道 · 分享生活感悟 · 记录思想火花</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#about" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg transition duration-300 flex items-center">
+                    <i class="fas fa-user-circle mr-2"></i> 了解更多
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-indigo-900 text-white px-6 py-3 rounded-lg transition duration-300 flex items-center">
+                    <i class="fas fa-envelope mr-2"></i> 联系我
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 关于我 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://picsum.photos/600/600?random=3" alt="苏耀勇" class="rounded-lg shadow-xl mx-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-indigo-500 pb-2 inline-block">关于我</h2>
+                    <p class="text-lg text-gray-600 mb-6">欢迎来到我的个人网站。我是苏耀勇，一位热爱太极拳和思考的人。在这里，我将分享我的太极拳修炼心得、生活随想以及各种文章。</p>
+                    <p class="text-lg text-gray-600 mb-8">我相信通过身心的修炼和思考，我们可以找到内心的平静与力量。希望我的分享能够为您带来一些启发和帮助。</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-indigo-600 hover:text-indigo-800 text-2xl">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <a href="#" class="text-indigo-600 hover:text-indigo-800 text-2xl">
+                            <i class="fab fa-weibo"></i>
+                        </a>
+                        <a href="#" class="text-indigo-600 hover:text-indigo-800 text-2xl">
+                            <i class="fab fa-zhihu"></i>
+                        </a>
+                        <a href="#" class="text-indigo-600 hover:text-indigo-800 text-2xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 文章部分 -->
+    <section id="articles" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">最新文章</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">分享我的思考与见解，记录生活中的点滴感悟</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 文章卡片 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md article-card transition duration-300">
+                    <img src="https://picsum.photos/600/400?random=4" alt="文章图片" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-indigo-600 text-sm font-semibold mb-2">思考 · 哲学</div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">寻找内心的平静</h3>
+                        <p class="text-gray-600 mb-4">在这个快节奏的世界中，如何找到内心的宁静？本文将分享一些个人的思考和方法...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm"><i class="far fa-calendar-alt mr-1"></i> 2023-10-15</span>
+                            <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium">阅读更多 <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 文章卡片 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md article-card transition duration-300">
+                    <img src="https://picsum.photos/600/400?random=5" alt="文章图片" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-indigo-600 text-sm font-semibold mb-2">太极 · 修炼</div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">太极拳的基本原则</h3>
+                        <p class="text-gray-600 mb-4">太极拳不仅是一种武术，更是一种生活哲学。本文将介绍太极拳的核心原则和如何应用...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm"><i class="far fa-calendar-alt mr-1"></i> 2023-09-28</span>
+                            <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium">阅读更多 <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 文章卡片 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md article-card transition duration-300">
+                    <img src="https://picsum.photos/600/400?random=6" alt="文章图片" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-indigo-600 text-sm font-semibold mb-2">生活 · 随想</div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">简单生活的力量</h3>
+                        <p class="text-gray-600 mb-4">在物质丰富的今天，简单生活反而成为一种奢侈。本文探讨如何通过简化生活获得更多幸福...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm"><i class="far fa-calendar-alt mr-1"></i> 2023-08-17</span>
+                            <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium">阅读更多 <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg transition duration-300 inline-flex items-center">
+                    <i class="fas fa-book-open mr-2"></i> 查看所有文章
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 太极拳部分 -->
+    <section id="taichi" class="py-20 taichi-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">太极拳修炼</h2>
+                <p class="text-lg max-w-2xl mx-auto">分享我的太极拳修炼心得与体会，探索身心合一的东方智慧</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 太极拳卡片 1 -->
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition duration-300">
+                    <div class="text-4xl mb-4 text-indigo-300">
+                        <i class="fas fa-yin-yang"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">太极基础</h3>
+                    <p class="text-gray-200 mb-4">介绍太极拳的基本站姿、呼吸方法和核理念，适合初学者入门。</p>
+                    <a href="#" class="text-indigo-300 hover:text-indigo-100 font-medium inline-flex items-center">
+                        了解更多 <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- 太极拳卡片 2 -->
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition duration-300">
+                    <div class="text-4xl mb-4 text-indigo-300">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">太极拳式</h3>
+                    <p class="text-gray-200 mb-4">详解各种太极拳式的动作要领、身法技巧和内在意念的运用。</p>
+                    <a href="#" class="text-indigo-300 hover:text-indigo-100 font-medium inline-flex items-center">
+                        了解更多 <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- 太极拳卡片 3 -->
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition duration-300">
+                    <div class="text-4xl mb-4 text-indigo-300">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">太极哲学</h3>
+                    <p class="text-gray-200 mb-4">探讨太极拳背后的哲学思想，阴阳平衡、无极生太极等核心概念。</p>
+                    <a href="#" class="text-indigo-300 hover:text-indigo-100 font-medium inline-flex items-center">
+                        了解更多 <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- 太极拳卡片 4 -->
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition duration-300">
+                    <div class="text-4xl mb-4 text-indigo-300">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">太极与健康</h3>
+                    <p class="text-gray-200 mb-4">分享太极拳对身心健康的益处，以及如何将太极理念融入日常生活。</p>
+                    <a href="#" class="text-indigo-300 hover:text-indigo-100 font-medium inline-flex items-center">
+                        了解更多 <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#" class="bg-transparent border-2 border-white hover:bg-white hover:text-indigo-900 text-white px-6 py-3 rounded-lg transition duration-300 inline-flex items-center">
+                    <i class="fas fa-play-circle mr-2"></i> 观看太极拳教学视频
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 生活随想 -->
+    <section id="thoughts" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">生活随想</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">记录日常生活中的感悟与思考，分享人生智慧</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 随想卡片 1 -->
+                <div class="thoughts-card bg-gray-50 rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 text-indigo-600 p-3 rounded-full mr-4">
+                            <i class="fas fa-quote-left text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">宁静的力量</h3>
+                            <p class="text-gray-500">2023年10月</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">在喧嚣的世界中，宁静是一种稀缺的资源。当我们学会在内心保持宁静，外界的纷扰便无法轻易撼动我们的心灵...</p>
+                    <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium">继续阅读 <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                
+                <!-- 随想卡片 2 -->
+                <div class="thoughts-card bg-gray-50 rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 text-indigo-600 p-3 rounded-full mr-4">
+                            <i class="fas fa-quote-left text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">生活的节奏</h3>
+                            <p class="text-gray-500">2023年9月</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">每个人都有自己的生活节奏，不必随波逐流。找到适合自己的步调，才能走得更远，活得更加从容...</p>
+                    <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium">继续阅读 <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                
+                <!-- 随想卡片 3 -->
+                <div class="thoughts-card bg-gray-50 rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 text-indigo-600 p-3 rounded-full mr-4">
+                            <i class="fas fa-quote-left text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">学会放下</h3>
+                            <p class="text-gray-500">2023年8月</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">人生中有很多东西值得珍惜，但也有很多需要学会放下。放下不必要的执着，才能腾出手来抓住真正重要的事物...</p>
+                    <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium">继续阅读 <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg transition duration-300 inline-flex items-center">
+                    <i class="fas fa-book mr-2"></i> 查看所有随想
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我 -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">联系我</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">如果您有任何问题或想要交流，欢迎随时联系我</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-8 rounded-lg">
+                    <h3 class="text-xl font-bold mb-6 border-b border-gray-700 pb-3">联系方式</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="bg-indigo-600 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">邮箱</p>
+                                <p>suyaoyong@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-indigo-600 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">地址</p>
+                                <p>中国·北京</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-indigo-600 p-3 rounded-full mr-4">
+                                <i class="fab fa-weixin"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">微信</p>
+                                <p>SuYaoYong_TaiChi</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-lg font-semibold mb-4">关注我</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-700 hover:bg-indigo-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-weixin"></i>
+                            </a>
+                            <a href="#" class="bg-gray-700 hover:bg-indigo-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-weibo"></i>
+                            </a>
+                            <a href="#" class="bg-gray-700 hover:bg-indigo-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-zhihu"></i>
+                            </a>
+                            <a href="#" class="bg-gray-700 hover:bg-indigo-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 p-8 rounded-lg">
+                    <h3 class="text-xl font-bold mb-6 border-b border-gray-700 pb-3">发送消息</h3>
+                    
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-400 mb-2">姓名</label>
+                            <input type="text" id="name" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-400 mb-2">邮箱</label>
+                            <input type="email" id="email" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-400 mb-2">留言</label>
+                            <textarea id="message" rows="4" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg transition duration-300 w-full">发送消息</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-2xl font-bold text-white mb-2">苏耀勇</h2>
+                    <p>探索太极之道 · 分享生活感悟</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#about" class="hover:text-white transition">关于我</a>
+                    <a href="#articles" class="hover:text-white transition">文章</a>
+                    <a href="#taichi" class="hover:text-white transition">太极拳</a>
+                    <a href="#thoughts" class="hover:text-white transition">生活随想</a>
+                    <a href="#contact" class="hover:text-white transition">联系我</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2023 苏耀勇个人网站. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
